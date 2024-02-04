@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d16uq5yp2f8sy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3np2r"]
+size = Vector2(240.931, 73.3118)
+
+[sub_resource type="Gradient" id="Gradient_vs2w8"]
+offsets = PackedFloat32Array(0, 0.51497, 1)
+colors = PackedColorArray(0, 1, 0, 1, 0.825431, 0.112944, 0.304008, 1, 0, 0.301961, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m3xem"]
+gradient = SubResource("Gradient_vs2w8")
+
+[node name="Hill" type="RigidBody2D"]
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.63151, 25.225)
+rotation = -0.523599
+scale = Vector2(20, 1)
+shape = SubResource("RectangleShape2D_3np2r")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-0.427713, 0.199446)
+scale = Vector2(0.944387, 74.6807)
+texture = SubResource("GradientTexture1D_m3xem")

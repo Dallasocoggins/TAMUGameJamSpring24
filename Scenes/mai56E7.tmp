@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://di3yttnemr3p5"]
+
+[ext_resource type="PackedScene" uid="uid://d16uq5yp2f8sy" path="res://Objects/Hill.tscn" id="1_wpuhl"]
+[ext_resource type="PackedScene" uid="uid://dnrypn7et02w2" path="res://Objects/Player.tscn" id="2_hrkuy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_wpuhl")]
+
+[node name="Player" parent="." instance=ExtResource("2_hrkuy")]
+position = Vector2(-17, -129)
